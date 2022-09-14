@@ -1,23 +1,24 @@
 <template>
-  <header>
-    <h1>Income Tracker</h1>
-    <div class="totalIncome">&euro; {{ totalIncome }}</div>
+  <header class="header">
+    <h1>Income Trccker</h1>
+    <div class="totalIncome">&euro;{{totalIncome}}</div>
   </header>
 </template>
 
 <script>
 export default {
-  name: "HeaderComounent",
-  data() {
-    return {
-      totalIncome: 0,
-    };
+  name: "HeaderSection",
+  props: {
+    totalIncome: Number,
+  },
+  setup() {
+    return {};
   },
 };
 </script>
 
 <style lang="scss">
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
